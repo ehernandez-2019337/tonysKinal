@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="402.0" style="-fx-background-color: #FFE7DB;" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emersonhernanez.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="169.0" fitWidth="162.0" layoutX="32.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/ImagenProgramador.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="36.0" prefHeight="35.0" prefWidth="334.0" text="Emerson Eduardo Hernández Silva " textFill="#562404" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="276.0" prefHeight="27.0" prefWidth="334.0" text="ehernandez-2019337@kinal.edu.gt" textFill="#562404" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="93.0" prefHeight="35.0" prefWidth="101.0" text="2019337" textFill="#562404" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="150.0" prefHeight="35.0" prefWidth="101.0" text="IN5AM" textFill="#562404" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Courier New" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="87.0" layoutX="256.0" layoutY="202.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Home3_37171.png" />
+         </image>
+      </ImageView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

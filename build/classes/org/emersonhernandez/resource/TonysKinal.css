@@ -1,0 +1,185 @@
+.menu-bar {
+    -fx-background-color: #F71312 ;
+    -fx-opacity: 0.4;
+    -fx-background-radius: 12px;
+    -fx-border-width: 3;
+    -fx-border-color: #F2A413;
+    -fx-cursor: hand;
+   
+    
+}
+.menu-bar .label {
+    -fx-font-size: 18.0 pt;
+    -fx-font-family: "Courier New";
+    -fx-text-fill: #F2A413;
+    -fx-font-weight: bold; 
+    -fx-padding: 10.0px;
+
+}
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background: #FEF8F8 ;
+    -fx-opacity: 0.5;
+    -fx-text-fill: #FEF8F8;
+}
+
+.menu-item {
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+    -fx-text-fill: #FEF8F8;
+    -fx-background: #FFE7DB ;
+}
+.menu-item .label{
+    -fx-font-size: 14.0 pt;
+    -fx-text-fill: #F2A413;
+}
+.menu-item .label:hover{
+    -fx-font-size: 14.0 pt;
+    -fx-background: #FEF8F8 ;
+    -fx-text-fill: #F2A413;
+}
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color:#FEF8F8 ;
+    -fx-border-width: 0.5px;
+    -fx-border-color: #F71312;
+    /** -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-background-radius: 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; 
+    -fx-opacity: 0.9;*/
+}
+.anchor-pane{
+    -fx-background-color:#FFE7DB ;
+}
+
+.labe2{
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold; 
+    -fx-text-fill:  #FFE7DB;
+    -fx-font-size: 28 pt;
+    
+}
+
+.button1{
+        -fx-background-color:   #FFF9F9 ;
+    -fx-text-fill: #e44b54;
+    -fx-font-weight: bold; 
+    -fx-background-radius: 0 30 30 0;
+}
+
+.anchor-pane1 {
+   -fx-background-color:#FFE7DB ;
+}
+
+.panel1 {
+    -fx-background-color:   #caf17b ;
+}
+
+.root
+{
+    /*-fx-base: dodgerblue; */
+}
+
+.datepicker-invalid
+{
+    -fx-border-color: red;
+}
+
+.datepicker-valid
+{
+    -fx-border-color: null;
+}
+
+/* The main calendar pane */
+.calendar {
+
+}
+
+/* The calendar header, which contains the navigation elements. */
+.calendar-header
+{
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-base,-70%), derive(-fx-base,-90%));
+    -fx-padding: 0.5em;
+   /* -fx-background-radius: 10;*/
+}
+
+/* The calendar footer, which contains the today button. It is only visible when the today button is shown */
+.calendar-footer
+{
+    -fx-background-color: linear-gradient(to top, derive(-fx-base,-70%), derive(-fx-base,-90%));
+    -fx-padding: 0.2em;
+}
+
+/* The 3 different panes, which show the month, the year, and the decades */
+.calendar-month-view, .calendar-year-view, .calendar-decades-view
+{
+    -fx-background-color: linear-gradient(to bottom, derive(-fx-base,80%), derive(-fx-base,40%));
+    -fx-padding: 0;
+}
+
+/* The usual button which either display the day of the current month, or the month in the year view, or the year in the decades view */
+.calendar-cell-current-month, .calendar-year-button, .calendar-month-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-cursor: hand;
+    -fx-padding: 0.7em;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+}
+
+/* The hover state of the buttons */
+.calendar-cell-current-month:hover, .calendar-year-button:hover, .calendar-month-button:hover {
+    -fx-background-color: -fx-cell-hover-color;
+}
+
+/* The day buttons for the previous and next month. */
+.calendar-cell-other-month {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 0, 0, 0;
+    -fx-opacity: 0.7;
+    -fx-cursor: hand;
+    -fx-padding: 0.7em;
+    -fx-background-radius: 8;
+}
+
+/* The hover state of this button. */
+.calendar-cell-other-month:hover {
+    -fx-background-color: -fx-cell-hover-color;
+}
+
+/* The button which shows the current day. */
+.calendar-cell-today {
+     -fx-background-color: -fx-accent;
+}
+
+/* The buttons in the header and the footer */
+.calendar-navigation-button, .calendar-navigation-title, .calendar-today-button {
+    -fx-background-color: null;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+/* don't make the title button transparent, when it is disabled in the decades view */
+.calendar-navigation-title:disabled {
+    -fx-opacity: 1;
+}
+
+/* The arrow for navigation. SVG is used for it. */
+.calendar-navigation-arrow {
+    /*padding determines the size of the arrow; This should match the design size in the SVG */
+    -fx-padding: 4 3.5 4 3.5;
+    -fx-padding: 0.333333em 0.333333em 0.333333em 0.333333em; /* 2 3.5 2 3.5 */
+    -fx-shape: "M 100 100 L 300 100 L 200 300 z";
+    -fx-background-color: #ffffff;
+}
+
+/* The cell which contain the week day names */
+.calendar-weekdays {
+    -fx-background-color: -fx-body-color;
+    -fx-padding: 3px;
+}
+
+.calendar-week-number {
+    -fx-font-size: 0.8em;
+    -fx-padding: 4px;
+}

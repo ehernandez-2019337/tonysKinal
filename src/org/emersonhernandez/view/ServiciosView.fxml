@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1164.0" style="-fx-background-color: #8fffaf;" styleClass="anchor-pane1" stylesheets="@../resource/TonysKinal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.emersonhernanez.controller.ServiciosController">
+   <children>
+      <AnchorPane layoutX="-61.0" layoutY="-16.0" prefHeight="617.0" prefWidth="364.0" style="-fx-background-radius: 0 180 180 0; -fx-background-color: F95F5F;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="121.0" layoutX="112.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Servicios.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="52.0" prefHeight="35.0" prefWidth="212.0" styleClass="labe2" text="Servicios" textFill="#f03a30" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnNuevo" layoutX="106.0" layoutY="225.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="134.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+               <graphic>
+                  <ImageView fx:id="imgNuevo" fitHeight="57.0" fitWidth="50.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../image/Agregar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="102.0" layoutY="305.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="134.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Edidar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnReporte" layoutX="102.0" layoutY="481.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="134.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte" textFill="#fffb7d">
+               <graphic>
+                  <ImageView fx:id="imgReporte" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Reporte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="102.0" layoutY="390.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="134.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar" textFill="#ff668e">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <GridPane fx:id="grpFecha" layoutX="318.0" layoutY="68.0" prefHeight="68.0" prefWidth="506.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="158.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="122.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="38.0" prefWidth="127.0" text="Codigo Servicio" />
+            <Label prefHeight="38.0" prefWidth="127.0" text="Tipo de Servicio" GridPane.rowIndex="1" />
+            <Label prefHeight="38.0" prefWidth="127.0" text="Fecha De Servicio" GridPane.columnIndex="2" />
+            <Label prefHeight="38.0" prefWidth="127.0" text="Codigo Empresa" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCodigoServicio" editable="false" prefHeight="35.0" prefWidth="158.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtTipoServicio" editable="false" prefHeight="35.0" prefWidth="158.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCodigoEmpresa" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblServicios" layoutX="294.0" layoutY="271.0" prefHeight="262.0" prefWidth="853.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="134.0" text="CodigoServicio" />
+          <TableColumn fx:id="colFechaServicio" prefWidth="136.0" text="Fecha Servicio" />
+            <TableColumn fx:id="colTipoServicio" prefWidth="139.0" text="Tipo Servicio" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="113.0" text="codigo.Empresa" />
+            <TableColumn fx:id="colHoraServicio" prefWidth="111.0" text="Hora Servicio" />
+            <TableColumn fx:id="colTelefonoContacto" prefWidth="114.0" text="Telefono Contacto" />
+            <TableColumn fx:id="colHoraServicio1" prefWidth="111.0" text="Lugar Servicio" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="935.0" layoutY="63.0" onMouseClicked="#ventanaEmpresas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Regresar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="87.0" layoutX="1013.0" layoutY="63.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Home3_37171.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="318.0" layoutY="153.0" prefHeight="38.0" prefWidth="127.0" text="Hora " />
+      <TextField fx:id="txtHora" editable="false" layoutX="435.0" layoutY="155.0" prefHeight="35.0" prefWidth="158.0" />
+      <Label layoutX="593.0" layoutY="153.0" prefHeight="38.0" prefWidth="127.0" text="Telefono Contacto" />
+      <TextField fx:id="txtTelefono" editable="false" layoutX="706.0" layoutY="146.0" prefHeight="35.0" prefWidth="158.0" />
+      <Label layoutX="318.0" layoutY="190.0" prefHeight="38.0" prefWidth="127.0" text="Minutos" />
+      <TextField fx:id="txtMinutos" editable="false" layoutX="435.0" layoutY="193.0" prefHeight="35.0" prefWidth="158.0" />
+      <Label layoutX="593.0" layoutY="192.0" prefHeight="38.0" prefWidth="127.0" text="lugarServicio" />
+      <TextField fx:id="txtLugarServicio" editable="false" layoutX="706.0" layoutY="194.0" prefHeight="35.0" prefWidth="158.0" />
+   </children>
+</AnchorPane>
